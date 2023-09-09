@@ -1,24 +1,23 @@
 import { useState, useEffect } from "react"
 
-import getProject from "../api/get-project"
+import getProjects from "../api/get-projects"
 
-export default function useProject(projectId) {
-    const [project, setProject] = useState();
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState();
+export default function useProjects() {
+    const [projects, setProjects] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [error, setError] = useState()
     
-    useEffect(() =>{
-        getProject(projectId)
+    useEffect(() => {
+        getProjects()
             .then((projects) => {
-                setProject(projects);
-                setIsLoading(false);
+                setProjects(projects)
+                setIsLoading(false)
             })
             .catch((error) =>{
-                setError(error);
-                setIsLoading(false);
+                setError(error)
+                setIsLoading(false)
             });
-    
-    }, [projectId]);
+    }, []);
 
-    return { project, isLoading, error };
+    return { projects, isLoading, error }
 }

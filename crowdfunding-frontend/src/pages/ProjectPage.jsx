@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom"
-import useProject from "../hooks/use-project"
+import useProject from "../hooks/use.project"
 
 function ProjectPage() {
-    const { id } = useParams();
+    const { id } = useParams()
     const { project, isLoading, error } = useProject(id)
 
     if (isLoading) {
-        return (<p>loading...</p>)
-    }
+        return (<p>loading...</p>)}
+
     if (error) {
         return (<p>{error.message}</p>)
     }
@@ -20,10 +20,10 @@ function ProjectPage() {
             <h3>Pledges:</h3>
             <ul>
                 {project.pledges.map((pledgeData, key) => {
-                return (
-                <li key={key}>
-                    {pledgeData.amount} from {pledgeData.supporter}
-                    </li>
+                    return (
+                        <li key={key}>
+                            {pledgeData.amount} from {pledgeData.supporter}
+                        </li>
                     );
                 })}
             </ul>
