@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import postLogin from "../api/post-login.js"
-import useAuth from "../hooks/use-auth.js"
+import useAuth from "..hooks/useAuth.jsx"
 
-function LoginForm() {
+function CreateProject() {
     const navigate = useNavigate()
     const {auth, setAuth} = useAuth()
 
@@ -39,20 +39,38 @@ function LoginForm() {
     return (
         <form>
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="title">Project name:</label>
                 <input
                     type="text"
-                    id="username"
-                    placeholder="Enter username"
+                    id="title"
+                    placeholder="Enter your Project name"
                     onChange={handleChange}
                 />
             </div>
             <div>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="description">Project description:</label>
                 <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
+                    type="text"
+                    id="description"
+                    placeholder="Enter your Project description"
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="goal">Goal amount:</label>
+                <input
+                    type="number"
+                    id="goal"
+                    placeholder="Enter your goal amount"
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="image">Image:</label>
+                <input
+                    type="url"
+                    id="goal"
+                    placeholder="Enter the URL for your image"
                     onChange={handleChange}
                 />
             </div>
@@ -63,4 +81,4 @@ function LoginForm() {
     )
 }
 
-export default LoginForm
+export default CreateProject
