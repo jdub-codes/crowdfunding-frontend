@@ -19,6 +19,7 @@ function NavBar() {
                         Log Out
                     </Link>
                     <Link to="/create">Create Project</Link>
+                    <Link to="/pledge">Make a Pledge</Link>
                     </>
                     ) : (
                     <Link to="/login">Login</Link>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import postLogin from "../api/post-login.js"
+import postProject from "../api/post-project.js"
 
 function CreateProject() {
     const navigate = useNavigate()
@@ -26,16 +26,11 @@ function CreateProject() {
                 projectDetails.title,
                 projectDetails.description,
                 projectDetails.goal,
-                projectDetails.image
+                projectDetails.image,
             ).then((response) => {
-                window.localStorage.setItem("token", response.token)
-                setProjectDetails({
-                    token: response.token,
-                });
                 navigate("/")
             });
         }
-
 
     return (
         <form>
@@ -76,11 +71,10 @@ function CreateProject() {
                 />
             </div>
             <button type="submit" onClick={handleSubmit}>
-                Submit
+                Create
             </button>
         </form>
     )
 }
-
 
 export default CreateProject

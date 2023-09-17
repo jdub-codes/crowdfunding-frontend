@@ -1,6 +1,6 @@
 async function postLogin(username, password) {
     const url =`${import.meta.env.VITE_API_URL}/api-token-auth/`
-    const response =await fetch (url, {
+    const response = await fetch (url, {
         method:"POST",
         headers: {
             "Content-Type":"application/json",
@@ -15,11 +15,11 @@ async function postLogin(username, password) {
         const fallbackError =`Error trying to login`
 
         const data = await response.json().catch(() => {
-            thrownewError(fallbackError)
+            throw new Error(fallbackError)
         });
 
         const errorMessage = data?.detail?? fallbackError
-        thrownewError(errorMessage)
+        throw new Error(errorMessage)
     }
 
     return await response.json()
