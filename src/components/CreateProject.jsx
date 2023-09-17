@@ -1,40 +1,41 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import postLogin from "../api/post-login.js"
-import useAuth from "..hooks/useAuth.jsx"
 
 function CreateProject() {
     const navigate = useNavigate()
-    const {auth, setAuth} = useAuth()
 
-    const [credentials, setCredentials] = useState({
-        username: "",
-        password: "",
+    const [projectDetails, setProjectDetails] = useState({
+        title: "",
+        description: "",
+        goal: "",
+        image: "",
     });
 
     const handleChange = (event) => {
         const { id, value } = event.target
-        setCredentials((prevCredentials) => ({
-            ...prevCredentials,
+        setProjectDetails((prevprojectDetails) => ({
+            ...prevprojectDetails,
             [id]: value,
         }));
     };
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        if (credentials.username && credentials.password) {
-            postLogin(
-                credentials.username,
-                credentials.password
+            postProject(
+                projectDetails.title,
+                projectDetails.description,
+                projectDetails.goal,
+                projectDetails.image
             ).then((response) => {
                 window.localStorage.setItem("token", response.token)
-                setAuth({
+                setProjectDetails({
                     token: response.token,
                 });
                 navigate("/")
             });
         }
-    };
+
 
     return (
         <form>
@@ -75,10 +76,11 @@ function CreateProject() {
                 />
             </div>
             <button type="submit" onClick={handleSubmit}>
-                Login
+                Submit
             </button>
         </form>
     )
 }
+
 
 export default CreateProject
