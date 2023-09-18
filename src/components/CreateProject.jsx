@@ -10,6 +10,7 @@ function CreateProject() {
         description: "",
         goal: "",
         image: "",
+        "is_open": true,
     });
 
     const handleChange = (event) => {
@@ -65,7 +66,7 @@ function CreateProject() {
                 <label htmlFor="image">Image:</label>
                 <input
                     type="url"
-                    id="goal"
+                    id="image"
                     placeholder="Enter the URL for your image"
                     onChange={handleChange}
                 />

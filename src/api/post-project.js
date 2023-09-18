@@ -1,4 +1,4 @@
-async function postProject(title, description, goal, image) {
+async function postProject(title, description, goal, image, date_created) {
     const url =`${import.meta.env.VITE_API_URL}/projects/`
     
     const response = await fetch (url, {
@@ -13,6 +13,7 @@ async function postProject(title, description, goal, image) {
             "goal": goal,
             "image": image,
             "is_open": true,
+            "date_created": new Date(),
         }),
     });
 
