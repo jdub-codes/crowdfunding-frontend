@@ -8,10 +8,10 @@ async function postPledge(amount, comment, anonymous, project) {
             "Authorization":`Token ${window.localStorage.getItem('token')}`
         },
         body: JSON.stringify({
-            'amount': amount,
-            'comment': comment,
-            'anonymous': anonymous,
-            'project': project,
+            "amount": amount,
+            "comment": comment,
+            "anonymous": anonymous,
+            "project": 9,
         }),
     });
 

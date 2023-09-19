@@ -10,6 +10,8 @@ import CreateProjectPage from "./pages/CreateProjectPage.jsx"
 import NavBar from"./components/NavBar.jsx"
 import { AuthProvider } from "./components/AuthProvider.jsx"
 import CreatePledge from "./components/CreatePledge.jsx"
+// import DeletePledge from "./components/DeletePledge.jsx"
+// import DeleteProject from "./components/DeleteProject.jsx"
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,9 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
       { path: "/create", element: <CreateProjectPage /> },
-      { path: "/pledge", element: <CreatePledge /> }
+      { path: "/pledge", element: <CreatePledge /> },
+      // { path: "/deletepledge", element: <DeleteProject /> },
+      // { path: "/deleterpoject", element: <DeletePledge /> }
     ],
   },
 ]);
