@@ -5,7 +5,6 @@ async function postUsers(username, password) {
         method:"POST",
         headers: {
             "Content-Type":"application/json",
-            // "Authorization":`Token ${window.localStorage.getItem('token')}`
         },
         body:JSON.stringify({
             "username": username,
