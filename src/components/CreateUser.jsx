@@ -22,7 +22,7 @@ function CreateUser() {
         event.preventDefault()
             postUsers(credentials.username, credentials.password)
             .then((response) => {
-                navigate("/login")
+                navigate("/")
             });
         }
 

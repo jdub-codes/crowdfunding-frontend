@@ -58,7 +58,6 @@ function CreatePledge(props) {
 
     return (
         <form>
-        {JSON.stringify(pledgeDetails)}
             <div>
                 <label htmlFor="amount">Amount:</label>
                 <input
