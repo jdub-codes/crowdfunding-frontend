@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import "./main.css"
 
 import HomePage from "./pages/HomePage.jsx"
 import AboutPage from "./pages/AboutPage.jsx"
@@ -15,6 +16,8 @@ import CreatePledge from "./components/CreatePledge.jsx"
 // import CreateUser from "./components/CreateUser.jsx"
 // import DeletePledge from "./components/DeletePledge.jsx"
 // import DeleteProject from "./components/DeleteProject.jsx"
+
+<img src="src/assets/images/Pennies_for_Pawsitivity_Logo_White_Background_Dark_Blue.png" alt="logo" class="nav-logo"></img>
 
 const router = createBrowserRouter([
   {

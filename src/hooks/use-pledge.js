@@ -11,7 +11,6 @@ export function usePledge(pledgeId) {
             .then((pledge) => {
                 setPledge(pledge);
                 setIsLoading(false);
-               
             })
             .catch((error) => {
                 setError(error);
