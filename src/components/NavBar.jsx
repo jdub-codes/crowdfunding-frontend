@@ -12,7 +12,7 @@ function NavBar() {
 
     return (
         <div>
-            <img src="/src/assets/images/Pennies_for_Pawsitivity_Logo_White_Background_Dark_Blue.png" alt="logo" class="nav-logo"></img>
+            <img src="https://raw.githubusercontent.com/jdub-codes/crowdfunding-frontend/main/src/assets/images/Pennies_for_Pawsitivity_Logo_White_Background_Dark_Blue.png" alt="logo" class="nav-logo"></img>
             <nav>
                 <Link to="/">HOME</Link>
                 <Link to="/about">ABOUT US</Link>
