@@ -1,6 +1,5 @@
 import { useAuth } from '../hooks/use-auth'
 import LoginForm from '../components/LoginForm'
-import EditProjectForm from '../components/EditProjectForm'
 import { useParams } from 'react-router-dom'
 
 const EditProjectPage = () => {

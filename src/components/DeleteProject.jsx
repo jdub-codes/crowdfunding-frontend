@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import postPledge from '../api/post-pledges'
 
-function DeletePledge(props) {
+function DeleteProject(props) {
     const navigate = useNavigate()
 
     const [isLoading, setIsLoading] = useState(false)
     
-    const [pledgeDetails, setPledgeDetails] = useState({
+    const [projectDetails, setProjectDetails] = useState({
         project: props.projectId,
         amount: 0,
         comment: "",
@@ -24,7 +24,7 @@ function DeletePledge(props) {
         }
         else {
             const { id, value } = event.target
-            setPledgeDetails ((prevPledgeDetails) => ({
+            setProjectDetails ((prevProjectDetails) => ({
                 ...prevPledgeDetails,
                 [id]: value,
             }));
@@ -85,4 +85,4 @@ function DeletePledge(props) {
     );
 }
 
-export default DeletePledge
+export default DeleteProject

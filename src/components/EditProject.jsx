@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import useProject from '../../hooks/use-project';
 import putProject from '../../api/put-project';
 
-
 const EditProjectForm = () => {
 
     const {auth, setAuth} = useAuth();
@@ -43,7 +42,8 @@ const EditProjectForm = () => {
                     project.goal,
                     project.image,
                 ).then((response) => {
-                    console.log("Project details updated");
+                    navigate("/")
+                    // console.log("Project details updated");
                 });
     };
 

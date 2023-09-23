@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import postPledge from '../api/post-pledges'
 
-function CreatePledge(props) {
+function DeletePledge(props) {
     const navigate = useNavigate()
 
     const [isLoading, setIsLoading] = useState(false)
@@ -85,4 +85,4 @@ function CreatePledge(props) {
     );
 }
 
-export default CreatePledge
+export default DeletePledge

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import useProject from "../hooks/use.project"
+import useProject from "../hooks/use-project"
 
 function ProjectPage() {
     const { id } = useParams()
