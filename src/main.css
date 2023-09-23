@@ -57,6 +57,37 @@ select {
 
 h1 {
 	font-size: 1rem;
-	/* font-weight: normal; */
 	color: white;
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: var(--blue);
+    padding-bottom: 24px;
+}
+
+h3 {
+	font-size: 1rem;
+    font-weight: bold;
+	color: var(--blue);
+	padding-top: 16px;
+	padding-bottom: 24px;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
 }
